@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamara Siebert - Portfolio</title>
+  <!-- insert meta desciption for google -->
+  <meta name="description" content="Tamara Siebert - Portfolio">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <!-- import anime -->
+  <script src="src/js/anime-master/lib/anime.min.js"></script>
+  <!-- import in-view.js from node_modules -->
+  <script src="src/js/inView.js"></script>
+</head>
+<body class="w-screen h-screen relative bg-[#0D0A0D] flex">
+
+  <div class="relative z-10 flex w-screen h-screen p-5 text-white">
+    <nav class="fixed top-0 bottom-0 left-0 flex flex-col flex-1 p-5 overflow-hidden flex-nowrap basis-1/2" style="place-content: flex-start space-between;">
+      <div>
+        <h1 class="font-bold tracking-brand text-7xl font-brand">Tamara <br>Siebert</h1>
+      </div>
+      <div>
+        <!-- List of Arts of Tamara Siebert -->
+        <ul class="text-lg [&>li]:flex [&>li]:gap-2 [&>li]:my-2 [&>li]:cursor-pointer">
+          <li class="pfau-item ballParent">
+            <!-- create div centered in line with a width & height of 2px a bg color of white -->
+            <div class="ball active"></div>
+            <p>Pfau mit Monstera</p>
+          </li>
+          <li class="flamingo-item ballParent inactive hover:opacity-60">
+            <div class="ball"></div>
+            <p>Flamingoschar</p>
+          </li>
+          <li class="gruene-stiletto-item ballParent inactive hover:opacity-60">
+            <div class="ball"></div>
+            <p>Grüne Stiletto</p>
+          </li>
+          <li class="tulpen-item ballParent inactive hover:opacity-60">
+            <div class="ball"></div>
+            <p>Tulpen in der Morgendämmerung</p>
+          </li>
+      </div>
+    </nav>
+    <!-- create main element taking up the rest of the screen with flex and creating a rounded div container holding an image and a title floating on top of the image -->
+    <main class="flex flex-col h-screen snap snap-y snap-mandatory items-end flex-1 gap-5 flex-nowrap [&>div]:last:mb-4 [&>div]:shadow-lg relative pointer-events-none">
+      <!-- create div with a background image and a title floating on top of the image -->
+      <div id="pfau" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/pfau_mit_monstera.jpg)]" style="background-position: 0px 0px;">
+        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
+          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Pfau mit Monstera</h2>
+          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
+          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+        </div>
+      </div>
+      <!-- create div with a background image and a title floating on top of the image -->
+      <div id="flamingo" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/flamingoschar.jpg)]" style="background-position: 0px 0px;">
+        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
+          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Flamingoschar</h2>
+          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
+          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+        </div>
+      </div>
+      <!-- create div with a background image and a title floating on top of the image -->
+      <div id="gruene-stiletto" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/gruene_stiletto.jpg)]" style="background-position: 0px 0px;">
+        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
+          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Grüne Stiletto</h2>
+          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
+          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+        </div>
+      </div>
+      <!-- create div with a background image and a title floating on top of the image -->
+      <div id="tulpen" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/tulpen_in_der_daemmerung.jpg)]" style="background-position: 0px 0px;">
+        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
+          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Tulpen in der Dämmerung</h2>
+          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
+          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="absolute inset-0 z-[1] bgAnim1 active"></div>
+  <div class="absolute inset-0 z-[1] bgAnim2"></div>
+  <div class="absolute inset-0 z-[1] bgAnim3"></div>
+  <div class="absolute inset-0 z-[1] bgAnim4"></div>
+<script>
+  // hide all h2 & h3 elements
+  document.querySelectorAll('h2, h3').forEach(el => el.style.opacity = 0);
+  const pfauParent = document.querySelector(".pfau-item");
+  const flamingoParent = document.querySelector('.flamingo-item');
+  const grueneStilettoParent = document.querySelector('.gruene-stiletto-item');
+  const tulpenParent = document.querySelector('.tulpen-item');
+  const ballParents = document.querySelectorAll('.ballParent');
+
+  // when ballParent is clicked add active class to child ball, remove active class from all other ballParents
+  // check if clicked ballParent has class from artLists, if so add active class to child ball and remove inactive class from clicked ballParent
+  // after that scroll to the div with the id of the artList
+  // artLists contains of a list of all artList classes and the id of the div to scroll to (without the # and the . (dot))
+  let artLists = {
+    'pfau-item': '#pfau',
+    'flamingo-item': '#flamingo',
+    'gruene-stiletto-item': '#gruene-stiletto',
+    'tulpen-item': '#tulpen'
+  };
+  let bgAnimList = {
+    'bgAnim1': artLists['pfau-item'],
+    'bgAnim2': artLists['flamingo-item'],
+    'bgAnim3': artLists['gruene-stiletto-item'],
+    'bgAnim4': artLists['tulpen-item']
+    };
+
+  ballParents.forEach(ballParent => {
+    ballParent.addEventListener('click', () => {
+      const clickedListItem = ballParent;
+      console.log(ballParent.classList);
+      ballParent.querySelector('.ball').classList.add('active');
+      ballParent.classList.remove('inactive');
+      ballParents.forEach(ballParent => {
+        if (ballParent !== clickedListItem) {
+          ballParent.querySelector('.ball').classList.remove('active');
+          ballParent.classList.add('inactive');
+        }
+      });
+
+      let artList = ballParent.classList[0];
+      console.log(artList);
+      let artListId = artLists[artList];
+      console.log(artListId);
+      document.querySelector(artListId).scrollIntoView({
+        behavior: 'smooth'
+      });
+      // if artLists pfau-item is clicked, add active class to bgAnim1 and remove active class from all other bgAnims
+      // if artLists flamingo-item is clicked, add active class to bgAnim2 and remove active class from all other bgAnims
+      // if artLists gruene-stiletto-item is clicked, add active class to bgAnim3 and remove active class from all other bgAnims
+      // if artLists tulpen-item is clicked, add active class to bgAnim4 and remove active class from all other bgAnims
+      // console log the amount of items in artList
+      let artListCount = Object.keys(artLists).length;
+      console.log(artListCount);
+
+      // loop through artLists and add active class to bgAnim and remove active class from all other bgAnims
+      for (let i = 1; i <= artListCount; i++) {
+        let bgAnim = 'bgAnim' + i;
+        console.log(bgAnim);
+        if (artList === Object.keys(artLists)[i - 1]) {
+          document.querySelector('.' + bgAnim).classList.add('active');
+        } else {
+          document.querySelector('.' + bgAnim).classList.remove('active');
+        }
+      }
+      // store artList in localStorage
+      localStorage.setItem('artList', artList);
+    });
+  });
+
+  // function to change bgAnim active based on artList in localStorage
+  function changeBgAnim() {
+    let artList = localStorage.getItem('artList');
+    console.log(artList);
+    let artListId = artLists[artList];
+    console.log(artListId);
+    // if artLists pfau-item is clicked, add active class to bgAnim1 and remove active class from all other bgAnims
+    // if artLists flamingo-item is clicked, add active class to bgAnim2 and remove active class from all other bgAnims
+    // if artLists gruene-stiletto-item is clicked, add active class to bgAnim3 and remove active class from all other bgAnims
+    // if artLists tulpen-item is clicked, add active class to bgAnim4 and remove active class from all other bgAnims
+    // console log the amount of items in artList
+    let artListCount = Object.keys(artLists).length;
+    console.log(artListCount);
+
+    // loop through artLists and add active class to bgAnim and remove active class from all other bgAnims
+    for (let i = 1; i <= artListCount; i++) {
+      let bgAnim = 'bgAnim' + i;
+      console.log(bgAnim);
+      if (artList === Object.keys(artLists)[i - 1]) {
+        document.querySelector('.' + bgAnim).classList.add('active');
+      } else {
+        document.querySelector('.' + bgAnim).classList.remove('active');
+      }
+    }
+  }
+
+
+  // parallax effect on all imageWrapper with background-position y value
+  const imageWrappers = document.querySelectorAll('.imageWrapper');
+  imageWrappers.forEach(imageWrapper => {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      imageWrapper.style.backgroundPosition = `0px -${scrollY * 0.2}px`;
+    })
+  })
+  // if imageWrapper is completely in viewport add "transform: translateX(30px)" to all other imageWrappers. Do the animation with anime.js an inView.js
+  const imageWrapper = document.querySelector('.imageWrapper');
+  inView.offset(550);
+  let isFirstInView = inView.is(document.querySelector('#pfau'));
+  if(isFirstInView == true) {
+    anime({
+      targets: '#flamingo, #gruene-stiletto, #tulpen',
+      translateX: 30,
+      duration: 200,
+      opacity: 0.5,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(100)
+    })
+    localStorage.setItem('artList', 'pfau-item');
+    // add class active to ballParent
+    pfauParent.classList.remove('inactive');
+    pfauParent.children[0].classList.add('active');
+    // remove all other classes from parents
+    ballParents.forEach(ballParent => {
+      if (ballParent !== pfauParent) {
+        ballParent.classList.add('inactive');
+        ballParent.children[0].classList.remove('active');
+      }
+    });
+
+  }
+  inView('#pfau').on('enter', () => {
+    let viewedPfau = 0;
+    if (viewedPfau <= 0) {
+      anime({
+        targets: '#pfau',
+        opacity: 1,
+        translateX: 0,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger(100)
+      })
+      anime({
+        targets: '#pfau h2',
+        opacity: 1,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1200
+      })
+      anime({
+        targets: '#pfau h3',
+        opacity: 0.5,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1400
+      })
+      viewedPfau++;
+    } else {
+      anime({
+        targets: '#pfau h2',
+        opacity: 1,
+        duration: 200,
+        easing: 'easeInOutQuad',
+      })
+      anime({
+        targets: '#pfau h3',
+        opacity: 0.5,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: 200
+      })
+      console.log("viewedPfau: " +viewedPfau)
+    }
+    localStorage.setItem('artList', 'pfau-item');
+    pfauParent.classList.remove('inactive');
+    pfauParent.children[0].classList.add('active');
+    ballParents.forEach(ballParent => {
+      if (ballParent !== pfauParent) {
+        ballParent.classList.add('inactive');
+        ballParent.children[0].classList.remove('active');
+      }
+    //add class active to bgAnim1 and remove active class from all other bgAnims
+      if (bgAnimList['bgAnim1'] === '#pfau') {
+        document.querySelector('.bgAnim1').classList.add('active');
+      } else {
+        document.querySelector('.bgAnim1').classList.remove('active');
+      }
+    });
+    changeBgAnim();
+  })
+  inView('#pfau').on('exit', () => {
+    anime({
+      targets: '#pfau',
+      opacity: 0.25,
+      translateX: 30,
+      duration: 200,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(100)
+    })
+    anime({
+      targets: '.imageWrapper h2',
+      opacity: 0.25,
+      duration: 200,
+      easing: 'easeInOutQuad',
+    })
+    anime({
+      targets: '.imageWrapper h3',
+      opacity: 0.25,
+      duration: 200,
+      easing: 'easeInOutQuad',
+    })
+  })
+  inView('#flamingo').on('enter', () => {
+    let viewedFlamingo = 0;
+    if (viewedFlamingo <= 0) {
+      anime({
+        targets: '#flamingo',
+        opacity: 1,
+        translateX: 0,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger(100)
+      })
+      anime({
+        targets: '#flamingo h2',
+        opacity: 1,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1200
+      })
+      anime({
+        targets: '#flamingo h3',
+        opacity: 0.5,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1400
+      })
+      viewedFlamingo++;
+    } else {
+      anime({
+        targets: '#flamingo h2',
+        opacity: 1,
+        duration: 200,
+        easing: 'easeInOutQuad',
+      })
+      anime({
+        targets: '#flamingo h3',
+        opacity: 0.5,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: 200
+      })
+      console.log("viewedFlamingo: " +viewedFlamingo)
+    }
+    localStorage.setItem('artList', 'flamingo-item');
+    // add class active to ballParent
+    flamingoParent.classList.remove('inactive');
+    flamingoParent.children[0].classList.add('active');
+    // remove all other classes from parents
+    ballParents.forEach(ballParent => {
+      if (ballParent !== flamingoParent) {
+        ballParent.classList.add('inactive');
+        ballParent.children[0].classList.remove('active');
+      }
+    });
+
+      changeBgAnim();
+  })
+  inView('#flamingo').on('exit', () => {
+    anime({
+      targets: '#flamingo',
+      opacity: 0.25,
+      translateX: 30,
+      duration: 200,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(100)
+    })
+  })
+  inView('#gruene-stiletto').on('enter', () => {
+    let viewedGrueneStiletto = 0;
+    if (viewedGrueneStiletto <= 0) {
+      anime({
+        targets: '#gruene-stiletto',
+        opacity: 1,
+        translateX: 0,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger(100)
+      })
+      anime({
+        targets: '#gruene-stiletto h2',
+        opacity: 1,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1200
+      })
+      anime({
+        targets: '#gruene-stiletto h3',
+        opacity: 0.5,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1400
+      })
+      viewedGrueneStiletto++;
+    } else {
+      anime({
+        targets: '#gruene-stiletto h2',
+        opacity: 1,
+        duration: 200,
+        easing: 'easeInOutQuad',
+      })
+      anime({
+        targets: '#gruene-stiletto h3',
+        opacity: 0.5,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: 200
+      })
+      console.log("viewedGrueneStiletto: " +viewedGrueneStiletto)
+    }
+    localStorage.setItem('artList', 'gruene-stiletto-item');
+    grueneStilettoParent.classList.remove('inactive');
+    grueneStilettoParent.children[0].classList.add('active');
+    ballParents.forEach(ballParent => {
+      if (ballParent !== grueneStilettoParent) {
+        ballParent.classList.add('inactive');
+        ballParent.children[0].classList.remove('active');
+      }
+    });
+
+      changeBgAnim();
+  })
+  inView('#gruene-stiletto').on('exit', () => {
+    anime({
+      targets: '#gruene-stiletto',
+      opacity: 0.25,
+      translateX: 30,
+      duration: 200,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(100)
+    })
+  })
+  inView('#tulpen').on('enter', () => {
+    let viewedTulpen = 0;
+    if (viewedTulpen <= 0) {
+      anime({
+        targets: '#tulpen',
+        opacity: 1,
+        translateX: 0,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger(100)
+      })
+      anime({
+        targets: '#tulpen h2',
+        opacity: 1,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1200
+      })
+      anime({
+        targets: '#tulpen h3',
+        opacity: 0.5,
+        duration: 400,
+        easing: 'easeInOutQuad',
+        delay: 1400
+      })
+      viewedTulpen++;
+    } else {
+      anime({
+        targets: '#tulpen h2',
+        opacity: 1,
+        duration: 200,
+        easing: 'easeInOutQuad',
+      })
+      anime({
+        targets: '#tulpen h3',
+        opacity: 0.5,
+        duration: 200,
+        easing: 'easeInOutQuad',
+        delay: 200
+      })
+      console.log("viewedTulpen: " +viewedTulpen)
+    }
+    localStorage.setItem('artList', 'tulpen-item');
+    tulpenParent.classList.remove('inactive');
+    tulpenParent.children[0].classList.add('active');
+    ballParents.forEach(ballParent => {
+      if (ballParent !== tulpenParent) {
+        ballParent.classList.add('inactive');
+        ballParent.children[0].classList.remove('active');
+      }
+    });
+
+      changeBgAnim();
+  })
+  inView('#tulpen').on('exit', () => {
+    anime({
+      targets: '#tulpen',
+      opacity: 0.25,
+      translateX: 30,
+      duration: 200,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(100)
+    })
+  })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
