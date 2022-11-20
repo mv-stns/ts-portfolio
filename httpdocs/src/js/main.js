@@ -20,7 +20,6 @@ let bgAnimList = {
 ballParents.forEach((ballParent) => {
 	ballParent.addEventListener("click", () => {
 		const clickedListItem = ballParent;
-		console.log(ballParent.classList);
 		ballParent.querySelector(".ball").classList.add("active");
 		ballParent.classList.remove("inactive");
 		ballParents.forEach((ballParent) => {
@@ -31,20 +30,16 @@ ballParents.forEach((ballParent) => {
 		});
 
 		let artList = ballParent.classList[0];
-		console.log(artList);
 		let artListId = artLists[artList];
-		console.log(artListId);
 		document.querySelector(artListId).scrollIntoView({
 			behavior: "smooth",
 		});
 
 		let artListCount = Object.keys(artLists).length;
-		console.log(artListCount);
 
 		// loop through artLists and add active class to bgAnim and remove active class from all other bgAnims
 		for (let i = 1; i <= artListCount; i++) {
 			let bgAnim = "bgAnim" + i;
-			console.log(bgAnim);
 			if (artList === Object.keys(artLists)[i - 1]) {
 				document.querySelector("." + bgAnim).classList.add("active");
 			} else {
@@ -57,15 +52,11 @@ ballParents.forEach((ballParent) => {
 
 function changeBgAnim() {
 	let artList = localStorage.getItem("artList");
-	console.log(artList);
 	let artListId = artLists[artList];
-	console.log(artListId);
 	let artListCount = Object.keys(artLists).length;
-	console.log(artListCount);
 
 	for (let i = 1; i <= artListCount; i++) {
 		let bgAnim = "bgAnim" + i;
-		console.log(bgAnim);
 		if (artList === Object.keys(artLists)[i - 1]) {
 			document.querySelector("." + bgAnim).classList.add("active");
 		} else {
@@ -74,13 +65,19 @@ function changeBgAnim() {
 	}
 }
 
-const imageWrappers = document.querySelectorAll(".imageWrapper");
-imageWrappers.forEach((imageWrapper) => {
-	window.addEventListener("scroll", () => {
-		const scrollY = window.scrollY;
-		imageWrapper.style.backgroundPosition = `0px -${scrollY * 0.2}px`;
+let imageWrappers = document.querySelectorAll(".imageWrapper");
+
+function doParallax(className) {
+	let elements = document.querySelectorAll(className);
+	elements.forEach((element) => {
+		window.addEventListener("scroll", () => {
+			const scrollY = window.scrollY;
+			element.style.backgroundPosition = `-80px -${scrollY * 0.3}px`;
+		});
 	});
-});
+}
+
+doParallax(".imageWrapper");
 
 const imageWrapper = document.querySelector(".imageWrapper");
 inView.offset(550);
@@ -104,277 +101,86 @@ if (isFirstInView == true) {
 		}
 	});
 }
-inView("#pfau").on("enter", () => {
-	let viewedPfau = 0;
-	if (viewedPfau <= 0) {
-		anime({
-			targets: "#pfau",
-			opacity: 1,
-			translateX: 0,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: anime.stagger(100),
-		});
-		anime({
-			targets: "#pfau h2",
-			opacity: 1,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1200,
-		});
-		anime({
-			targets: "#pfau h3",
-			opacity: 0.5,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1400,
-		});
-		viewedPfau++;
-	} else {
-		anime({
-			targets: "#pfau h2",
-			opacity: 1,
-			duration: 200,
-			easing: "easeInOutQuad",
-		});
-		anime({
-			targets: "#pfau h3",
-			opacity: 0.5,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: 200,
-		});
-		console.log("viewedPfau: " + viewedPfau);
-	}
-	localStorage.setItem("artList", "pfau-item");
-	pfauParent.classList.remove("inactive");
-	pfauParent.children[0].classList.add("active");
-	ballParents.forEach((ballParent) => {
-		if (ballParent !== pfauParent) {
-			ballParent.classList.add("inactive");
-			ballParent.children[0].classList.remove("active");
-		}
-		if (bgAnimList["bgAnim1"] === "#pfau") {
-			document.querySelector(".bgAnim1").classList.add("active");
+
+// refactoring of the anime and inView function as another function by entering the either of the wanted id's
+function inViewAnim(id) {
+	// take the id and seperate it 2 variables, one with the # and one without
+	let idWithHash = id;
+	let idWithoutHash = id.slice(1);
+
+	inView(idWithHash).on("enter", () => {
+		console.log(idWithHash);
+		let viewedId = 0;
+		if (viewedId <= 0) {
+			anime({
+				targets: idWithHash,
+				opacity: 1,
+				translateX: 0,
+				duration: 200,
+				easing: "easeInOutQuad",
+				delay: anime.stagger(100),
+			});
+			anime({
+				targets: idWithHash + " h2",
+				opacity: 1,
+				duration: 400,
+				easing: "easeInOutQuad",
+				delay: 200,
+			});
+			anime({
+				targets: idWithHash + " h3",
+				opacity: 0.5,
+				duration: 400,
+				easing: "easeInOutQuad",
+				delay: 600,
+			});
+			viewedId++;
 		} else {
-			document.querySelector(".bgAnim1").classList.remove("active");
+			anime({
+				targets: idWithHash + " h2",
+				opacity: 1,
+				duration: 200,
+				easing: "easeInOutQuad",
+			});
+			anime({
+				targets: idWithHash + " h3",
+				opacity: 0.5,
+				duration: 200,
+				easing: "easeInOutQuad",
+				delay: 200,
+			});
 		}
+		let idParent = document.querySelector( "." + idWithoutHash + "-item");
+		localStorage.setItem("artList", idWithoutHash + "-item");
+		idParent.classList.remove("inactive");
+		idParent.children[0].classList.add("active");
+		ballParents.forEach((ballParent) => {
+			if (ballParent !== idParent) {
+				ballParent.classList.add("inactive");
+				ballParent.children[0].classList.remove("active");
+			}
+		});
+
+		changeBgAnim();
 	});
-	changeBgAnim();
-});
-inView("#pfau").on("exit", () => {
-	anime({
-		targets: "#pfau",
-		opacity: 0.25,
-		translateX: 30,
-		duration: 200,
-		easing: "easeInOutQuad",
-		delay: anime.stagger(100),
-	});
-	anime({
-		targets: ".imageWrapper h2",
-		opacity: 0.25,
-		duration: 200,
-		easing: "easeInOutQuad",
-	});
-	anime({
-		targets: ".imageWrapper h3",
-		opacity: 0.25,
-		duration: 200,
-		easing: "easeInOutQuad",
-	});
-});
-inView("#flamingo").on("enter", () => {
-	let viewedFlamingo = 0;
-	if (viewedFlamingo <= 0) {
+	inView(idWithHash).on("exit", () => {
 		anime({
-			targets: "#flamingo",
-			opacity: 1,
-			translateX: 0,
+			targets: idWithHash,
+			opacity: 0.25,
+			translateX: 30,
 			duration: 200,
 			easing: "easeInOutQuad",
 			delay: anime.stagger(100),
 		});
 		anime({
-			targets: "#flamingo h2",
-			opacity: 1,
+			targets: idWithHash + " h2, " + idWithHash + " h3",
+			opacity: 0,
 			duration: 400,
 			easing: "easeInOutQuad",
-			delay: 1200,
 		});
-		anime({
-			targets: "#flamingo h3",
-			opacity: 0.5,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1400,
-		});
-		viewedFlamingo++;
-	} else {
-		anime({
-			targets: "#flamingo h2",
-			opacity: 1,
-			duration: 200,
-			easing: "easeInOutQuad",
-		});
-		anime({
-			targets: "#flamingo h3",
-			opacity: 0.5,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: 200,
-		});
-		console.log("viewedFlamingo: " + viewedFlamingo);
-	}
-	localStorage.setItem("artList", "flamingo-item");
-	// add class active to ballParent
-	flamingoParent.classList.remove("inactive");
-	flamingoParent.children[0].classList.add("active");
-	// remove all other classes from parents
-	ballParents.forEach((ballParent) => {
-		if (ballParent !== flamingoParent) {
-			ballParent.classList.add("inactive");
-			ballParent.children[0].classList.remove("active");
-		}
 	});
-
-	changeBgAnim();
-});
-inView("#flamingo").on("exit", () => {
-	anime({
-		targets: "#flamingo",
-		opacity: 0.25,
-		translateX: 30,
-		duration: 200,
-		easing: "easeInOutQuad",
-		delay: anime.stagger(100),
-	});
-});
-inView("#gruene-stiletto").on("enter", () => {
-	let viewedGrueneStiletto = 0;
-	if (viewedGrueneStiletto <= 0) {
-		anime({
-			targets: "#gruene-stiletto",
-			opacity: 1,
-			translateX: 0,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: anime.stagger(100),
-		});
-		anime({
-			targets: "#gruene-stiletto h2",
-			opacity: 1,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1200,
-		});
-		anime({
-			targets: "#gruene-stiletto h3",
-			opacity: 0.5,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1400,
-		});
-		viewedGrueneStiletto++;
-	} else {
-		anime({
-			targets: "#gruene-stiletto h2",
-			opacity: 1,
-			duration: 200,
-			easing: "easeInOutQuad",
-		});
-		anime({
-			targets: "#gruene-stiletto h3",
-			opacity: 0.5,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: 200,
-		});
-		console.log("viewedGrueneStiletto: " + viewedGrueneStiletto);
-	}
-	localStorage.setItem("artList", "gruene-stiletto-item");
-	grueneStilettoParent.classList.remove("inactive");
-	grueneStilettoParent.children[0].classList.add("active");
-	ballParents.forEach((ballParent) => {
-		if (ballParent !== grueneStilettoParent) {
-			ballParent.classList.add("inactive");
-			ballParent.children[0].classList.remove("active");
-		}
-	});
-
-	changeBgAnim();
-});
-inView("#gruene-stiletto").on("exit", () => {
-	anime({
-		targets: "#gruene-stiletto",
-		opacity: 0.25,
-		translateX: 30,
-		duration: 200,
-		easing: "easeInOutQuad",
-		delay: anime.stagger(100),
-	});
-});
-inView("#tulpen").on("enter", () => {
-	let viewedTulpen = 0;
-	if (viewedTulpen <= 0) {
-		anime({
-			targets: "#tulpen",
-			opacity: 1,
-			translateX: 0,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: anime.stagger(100),
-		});
-		anime({
-			targets: "#tulpen h2",
-			opacity: 1,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1200,
-		});
-		anime({
-			targets: "#tulpen h3",
-			opacity: 0.5,
-			duration: 400,
-			easing: "easeInOutQuad",
-			delay: 1400,
-		});
-		viewedTulpen++;
-	} else {
-		anime({
-			targets: "#tulpen h2",
-			opacity: 1,
-			duration: 200,
-			easing: "easeInOutQuad",
-		});
-		anime({
-			targets: "#tulpen h3",
-			opacity: 0.5,
-			duration: 200,
-			easing: "easeInOutQuad",
-			delay: 200,
-		});
-		console.log("viewedTulpen: " + viewedTulpen);
-	}
-	localStorage.setItem("artList", "tulpen-item");
-	tulpenParent.classList.remove("inactive");
-	tulpenParent.children[0].classList.add("active");
-	ballParents.forEach((ballParent) => {
-		if (ballParent !== tulpenParent) {
-			ballParent.classList.add("inactive");
-			ballParent.children[0].classList.remove("active");
-		}
-	});
-
-	changeBgAnim();
-});
-inView("#tulpen").on("exit", () => {
-	anime({
-		targets: "#tulpen",
-		opacity: 0.25,
-		translateX: 30,
-		duration: 200,
-		easing: "easeInOutQuad",
-		delay: anime.stagger(100),
-	});
-});
+}
+inViewAnim("#pfau");
+inViewAnim("#flamingo");
+inViewAnim("#gruene-stiletto");
+inViewAnim("#tulpen");

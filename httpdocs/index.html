@@ -9,9 +9,9 @@
   <meta name="description" content="Tamara Siebert - Portfolio">
   <link rel="stylesheet" href="./src/css/main.css">
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> -->
   <!-- import anime -->
   <script src="src/js/anime-master/lib/anime.min.js"></script>
   <!-- import in-view.js from node_modules -->
@@ -46,44 +46,41 @@
           </li>
       </div>
     </nav>
-    <!-- create main element taking up the rest of the screen with flex and creating a rounded div container holding an image and a title floating on top of the image -->
-    <main class="flex flex-col h-screen snap snap-y snap-mandatory items-end flex-1 gap-5 flex-nowrap [&>div]:last:mb-4 [&>div]:shadow-lg relative pointer-events-none">
-      <!-- create div with a background image and a title floating on top of the image -->
-      <div id="pfau" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/pfau_mit_monstera.jpg)]" style="background-position: 0px 0px;">
+
+    <main class="flex flex-col h-screen snap snap-y snap-mandatory items-end flex-1 gap-5 flex-nowrap [&>div]:last:mb-4 [&>div]:shadow-xl [&>div]:ring [&>div]:ring-inset [&>div]:ring-white [&>div]:shadow-black/50 relative pointer-events-none">
+
+      <div id="pfau" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/pfau_mit_monstera.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
         <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
           <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Pfau mit Monstera</h2>
           <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         </div>
       </div>
-      <!-- create div with a background image and a title floating on top of the image -->
-      <div id="flamingo" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/flamingoschar.jpg)]" style="background-position: 0px 0px;">
+
+      <div id="flamingo" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/flamingoschar.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
         <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
           <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Flamingoschar</h2>
           <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         </div>
       </div>
-      <!-- create div with a background image and a title floating on top of the image -->
-      <div id="gruene-stiletto" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/gruene_stiletto.jpg)]" style="background-position: 0px 0px;">
+
+      <div id="gruene-stiletto" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/gruene_stiletto.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
         <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
           <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Grüne Stiletto</h2>
           <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         </div>
       </div>
-      <!-- create div with a background image and a title floating on top of the image -->
-      <div id="tulpen" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-cover bg-[url(../img/projects/tulpen_in_der_daemmerung.jpg)]" style="background-position: 0px 0px;">
+
+      <div id="tulpen" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/tulpen_in_der_daemmerung.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
         <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
           <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Tulpen in der Dämmerung</h2>
           <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <!-- absolute div inset-0 and linear gradient from top to bottom, transparent to black -->
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black/50"></div>
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         </div>
       </div>
+
     </main>
   </div>
   <div class="absolute inset-0 z-[1] bgAnim1 active"></div>

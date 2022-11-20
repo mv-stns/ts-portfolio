@@ -2,10 +2,7 @@
 module.exports = {
   content: [
     "./**/*.html",
-    "./**/*.js",
-    "./**/*.jsx",
-    "./**/*.ts",
-    "./**/*.tsx",
+    "./**/*.js"
   ],
   presets: [],
   darkMode: "media", // or 'class'
