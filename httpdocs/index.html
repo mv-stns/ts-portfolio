@@ -1,92 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tamara Siebert - Portfolio</title>
-  <!-- insert meta desciption for google -->
-  <meta name="description" content="Tamara Siebert - Portfolio">
-  <link rel="stylesheet" href="./src/css/main.css">
-  <!-- Google Fonts -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> -->
-  <!-- import anime -->
-  <script src="src/js/anime-master/lib/anime.min.js"></script>
-  <!-- import in-view.js from node_modules -->
-  <script src="src/js/inView.js"></script>
-</head>
-<body class="w-screen h-screen relative bg-[#0D0A0D] flex">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tamara Siebert - Portfolio</title>
+		<!-- insert meta desciption for google -->
+		<meta name="description" content="Tamara Siebert - Portfolio" />
+		<link rel="stylesheet" href="./src/css/main.css" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+		<!-- import anime -->
+		<script src="src/js/anime-master/lib/anime.min.js"></script>
+		<!-- import in-view.js from node_modules -->
+		<script src="src/js/inView.js"></script>
+		<!-- jQuery cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body class="w-screen h-screen relative bg-[#0D0A0D] flex">
+		<div class="relative z-10 flex w-screen h-screen p-5 text-white">
+			<nav class="fixed top-0 bottom-0 left-0 flex flex-col flex-1 p-5 overflow-hidden flex-nowrap basis-1/2" style="place-content: flex-start space-between">
+				<div>
+					<h1 class="font-bold tracking-brand text-7xl font-brand">Tamara <br />Siebert</h1>
+				</div>
+				<div>
+					<!-- List of Arts of Tamara Siebert -->
+					<ul id="navList" class="text-lg [&>li]:flex [&>li]:gap-2 [&>li]:my-2 [&>li]:cursor-pointer"></ul>
+				</div>
+			</nav>
 
-  <div class="relative z-10 flex w-screen h-screen p-5 text-white">
-    <nav class="fixed top-0 bottom-0 left-0 flex flex-col flex-1 p-5 overflow-hidden flex-nowrap basis-1/2" style="place-content: flex-start space-between;">
-      <div>
-        <h1 class="font-bold tracking-brand text-7xl font-brand">Tamara <br>Siebert</h1>
-      </div>
-      <div>
-        <!-- List of Arts of Tamara Siebert -->
-        <ul class="text-lg [&>li]:flex [&>li]:gap-2 [&>li]:my-2 [&>li]:cursor-pointer">
-          <li class="pfau-item ballParent">
-            <!-- create div centered in line with a width & height of 2px a bg color of white -->
-            <div class="ball active"></div>
-            <p>Pfau mit Monstera</p>
-          </li>
-          <li class="flamingo-item ballParent inactive hover:opacity-60">
-            <div class="ball"></div>
-            <p>Flamingoschar</p>
-          </li>
-          <li class="gruene-stiletto-item ballParent inactive hover:opacity-60">
-            <div class="ball"></div>
-            <p>Grüne Stiletto</p>
-          </li>
-          <li class="tulpen-item ballParent inactive hover:opacity-60">
-            <div class="ball"></div>
-            <p>Tulpen in der Morgendämmerung</p>
-          </li>
-      </div>
-    </nav>
+			<main class="flex flex-col h-screen snap snap-y snap-mandatory items-end flex-1 gap-5 flex-nowrap [&>div]:last:mb-4 [&>div]:shadow-xl [&>div]:ring [&>div]:ring-inset [&>div]:ring-white [&>div]:shadow-black/50 relative pointer-events-none"></main>
+		</div>
 
-    <main class="flex flex-col h-screen snap snap-y snap-mandatory items-end flex-1 gap-5 flex-nowrap [&>div]:last:mb-4 [&>div]:shadow-xl [&>div]:ring [&>div]:ring-inset [&>div]:ring-white [&>div]:shadow-black/50 relative pointer-events-none">
-
-      <div id="pfau" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/pfau_mit_monstera.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
-        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
-          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Pfau mit Monstera</h2>
-          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        </div>
-      </div>
-
-      <div id="flamingo" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/flamingoschar.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
-        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
-          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Flamingoschar</h2>
-          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        </div>
-      </div>
-
-      <div id="gruene-stiletto" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/gruene_stiletto.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
-        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
-          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Grüne Stiletto</h2>
-          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        </div>
-      </div>
-
-      <div id="tulpen" class="imageWrapper shrink-0 snap-start snap-always rounded-xl relative w-[880px] h-[700px] bg-[#0D0A0D] bg-no-repeat bg-[url(../img/projects/tulpen_in_der_daemmerung.jpg)] contrast-125 bg-[length:115%]" style="background-position: -80px 0px;">
-        <div class="absolute inset-0 flex p-10 leading-none rounded-xl">
-          <h2 class="mt-auto text-[40px] font-bold tracking-[-2px] font-brand z-10">Tulpen in der Dämmerung</h2>
-          <h3 class="mt-auto ml-2 text-[32px] tracking-[-1px] leading-none opacity-50 font-brand z-10">2021</h3>
-          <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-        </div>
-      </div>
-
-    </main>
-  </div>
-  <div class="absolute inset-0 z-[1] bgAnim1 active"></div>
-  <div class="absolute inset-0 z-[1] bgAnim2"></div>
-  <div class="absolute inset-0 z-[1] bgAnim3"></div>
-  <div class="absolute inset-0 z-[1] bgAnim4"></div>
-<script src="./src/js/main.js"></script>
-</body>
+		<script async src="./src/js/main.js"></script>
+	</body>
 </html>

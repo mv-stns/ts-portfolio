@@ -1314,20 +1314,8 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\.\.\/img\/projects\/pfau_mit_monstera\.jpg\)\]{
-  background-image: url(../img/projects/pfau_mit_monstera.jpg);
-}
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-.bg-\[url\(\.\.\/img\/projects\/flamingoschar\.jpg\)\]{
-  background-image: url(../img/projects/flamingoschar.jpg);
-}
-.bg-\[url\(\.\.\/img\/projects\/gruene_stiletto\.jpg\)\]{
-  background-image: url(../img/projects/gruene_stiletto.jpg);
-}
-.bg-\[url\(\.\.\/img\/projects\/tulpen_in_der_daemmerung\.jpg\)\]{
-  background-image: url(../img/projects/tulpen_in_der_daemmerung.jpg);
 }
 .from-transparent{
   --tw-gradient-from: transparent;
@@ -1864,8 +1852,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: url(../img/projects/pfau_mit_monstera.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim2{
   position: fixed;
@@ -1876,8 +1864,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: url(../img/projects/flamingoschar.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim3{
   position: fixed;
@@ -1888,8 +1876,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: url(../img/projects/gruene_stiletto.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim4{
   position: fixed;
@@ -1900,11 +1888,83 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: url(../img/projects/tulpen_in_der_daemmerung.jpg);
   opacity: 0;
+  background-size: 200%;
+}
+.bgAnim5{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim6{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim7{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim8{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim9{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim10{
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  background-size: 200%;
 }
 
-.bgAnim1.active, .bgAnim2.active, .bgAnim3.active, .bgAnim4.active{
+.bgAnim1.active, .bgAnim2.active, .bgAnim3.active, .bgAnim4.active, .bgAnim5.active, .bgAnim6.active, .bgAnim7.active, .bgAnim8.active, .bgAnim9.active, .bgAnim10.active{
   transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0.4;
@@ -1913,10 +1973,6 @@ video {
 
 .hover\:font-bold:hover{
   font-weight: 700;
-}
-
-.hover\:opacity-60:hover{
-  opacity: 0.6;
 }
 
 .before\:hover\:text-center:hover::before{

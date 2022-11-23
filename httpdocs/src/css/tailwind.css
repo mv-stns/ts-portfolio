@@ -25,26 +25,56 @@
 }
 .bgAnim1 {
   @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
-  background-image: url(../img/projects/pfau_mit_monstera.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim2 {
   @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
-  background-image: url(../img/projects/flamingoschar.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim3 {
   @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
-  background-image: url(../img/projects/gruene_stiletto.jpg);
   opacity: 0;
+  background-size: 200%;
 }
 .bgAnim4 {
   @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
-  background-image: url(../img/projects/tulpen_in_der_daemmerung.jpg);
   opacity: 0;
+  background-size: 200%;
+}
+.bgAnim5 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim6 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim7 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim8 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim9 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
+}
+.bgAnim10 {
+  @apply fixed duration-700 ease-in-out bg-center bg-no-repeat bg-cover blur-3xl;
+  opacity: 0;
+  background-size: 200%;
 }
 
-.bgAnim1.active, .bgAnim2.active, .bgAnim3.active, .bgAnim4.active{
+.bgAnim1.active, .bgAnim2.active, .bgAnim3.active, .bgAnim4.active, .bgAnim5.active, .bgAnim6.active, .bgAnim7.active, .bgAnim8.active, .bgAnim9.active, .bgAnim10.active {
   @apply duration-700 ease-in-out;
   opacity: 0.4;
   background-size: 200%;
