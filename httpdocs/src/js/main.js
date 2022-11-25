@@ -10,8 +10,10 @@ async function getStrapiData() {
 	console.log("get strapi data");
 
 	try {
-		const strapiurl = "http://localhost:1337/api/ateliers?populate=*";
-		const strapiapikey = "59bad8f5043eebfba6246415ee2620a845d1a4a65b0a20df927d6b3f01161750e59022e17557aa534c9d9be42c1d271ccab5c7790080e036642dce10a443cc1304a7629583c51377d58664c2d4a6c0cf60a73a45582adb750a9fdae6c6bdeb69b58006dada8363e3844c6bed907c3ce91cf43bad77ce4dd4993d1db9a4a21f15";
+		// const strapiurl = "http://localhost:1337/api/ateliers?populate=*";
+		const strapiurl = "http://backend.tsiebert.vaitschulis.com/api/ateliers?populate=*";
+		// const strapiapikey = "59bad8f5043eebfba6246415ee2620a845d1a4a65b0a20df927d6b3f01161750e59022e17557aa534c9d9be42c1d271ccab5c7790080e036642dce10a443cc1304a7629583c51377d58664c2d4a6c0cf60a73a45582adb750a9fdae6c6bdeb69b58006dada8363e3844c6bed907c3ce91cf43bad77ce4dd4993d1db9a4a21f15";
+		const strapiapikey = "46a470c2085c2fc7f1e46934f5ab23c48563ef4405516e41a729887c01bd91b16d5b76f350b81182fcb1da297a9f85cd5c5c6e97ca208fa8dcd880973f3dc726abb41cb0895bf14662f3fe6c16af021e298b1db9bb71adb9c8eb552449be7540691cfdd2ecc9c27adc62855da6f3b4e43f4e834cb0e68efd0f30a3f4fec6c721"; // api for backend website
 
 		// use jquery to get the data from the backend
 
