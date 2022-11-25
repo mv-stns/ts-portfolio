@@ -36,7 +36,7 @@ async function getStrapiData() {
 				const paintingYear = atelierDetails.paintingyear.slice(0, 4);
 				const pricing = atelierDetails.pricing;
 				const artDescription = atelierDetails.description;
-				const artImage = "http://localhost:1337" + atelierDetails.image.data.attributes.url;
+				const artImage = "https://backend.tsiebert.vaitschulis.com" + atelierDetails.image.data.attributes.url;
 				// artname without spaces and lowercase
 				const artNameNoSpace = artname.replace(/\s+/g, "").toLowerCase();
 				const artId = artname.replace(/\s+/g, "").toLowerCase() + atelierItem.id;
